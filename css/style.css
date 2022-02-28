@@ -1,0 +1,825 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  color: #2d2c2c;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+.Btn {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.5rem 3.5rem;
+  border: none;
+  border-radius: 10rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Container {
+  width: 100%;
+  max-width: 120rem;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+}
+
+.FormBtn {
+  margin-top: 2.5rem;
+  cursor: pointer;
+}
+
+.BtnGradient {
+  background: -webkit-gradient(linear, left top, right top, from(#f1be14), to(#ed8f03e5));
+  background: linear-gradient(to right, #f1be14, #ed8f03e5);
+}
+
+.BtnGradient:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#ed8f03e5), to(#f1be14));
+  background: linear-gradient(to right, #ed8f03e5, #f1be14);
+}
+
+.Dots {
+  font-size: 2.4rem;
+  margin-left: 0.5rem;
+  opacity: 0.75;
+}
+
+.BtnPurple {
+  background: #ED8F03;
+}
+
+.BtnPurple:hover {
+  background: #56247f;
+}
+
+.Header {
+  width: 100%;
+  height: 7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(53, 10, 79, 0.7);
+  z-index: 999;
+}
+
+@media (min-width: 768px) {
+  .Header {
+    height: 10rem;
+  }
+}
+
+.Nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.Logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-size: 2.8rem;
+}
+
+.LogoImg {
+  max-width: 80%;
+}
+
+.LogoText {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 2.6rem;
+  letter-spacing: 2px;
+}
+
+.HamburgerMenu {
+  font-size: 2.6rem;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  z-index: 1500;
+}
+
+@media (min-width: 1000px) {
+  .HamburgerMenu {
+    display: none;
+  }
+}
+
+.fa-times {
+  display: none;
+}
+
+.MenuOpen .HamburgerMenu .fa-times {
+  display: block;
+}
+
+.MenuOpen .HamburgerMenu .fa-bars {
+  display: none;
+}
+
+.NavList {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #ED8F03;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1400;
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+@media (min-width: 1000px) {
+  .NavList {
+    position: initial;
+    width: initial;
+    height: initial;
+    background-color: transparent;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial;
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.MenuOpen .NavList {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.NavLink {
+  display: block;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 1rem;
+}
+
+@media (min-width: 1000px) {
+  .NavLink {
+    font-size: 1.5rem;
+    font-weight: bold;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+  }
+}
+
+@media (min-width: 1000px) {
+  .NavLink:hover {
+    color: #f1be14;
+  }
+}
+
+.NavItem {
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 1000px) {
+  .NavItem:last-child {
+    margin-right: 3rem;
+    margin-bottom: 0;
+  }
+}
+
+.Hero {
+  width: 100%;
+  height: 100vh;
+  background: url("../images/heroBackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+}
+
+.Hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  background: rgba(53, 10, 79, 0.5);
+  z-index: -1;
+}
+
+.MainHeading {
+  color: #fff;
+  line-height: 1;
+  text-shadow: 1px 1px 1rem rgba(0, 0, 0, 0.5);
+  margin-bottom: 2.5rem;
+}
+
+.Title {
+  font-size: 4.8rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+@media (min-width: 768px) {
+  .Title {
+    font-size: 8rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .Title {
+    font-size: 12rem;
+  }
+}
+
+.Subtitle {
+  font-size: 3.6rem;
+  font-weight: 300;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+@media (min-width: 1000px) {
+  .Subtitle {
+    font-size: 4.6rem;
+  }
+}
+
+.Booking {
+  background: -webkit-gradient(linear, left top, right top, from(#f1be14), to(#ed8f03e5));
+  background: linear-gradient(to right, #f1be14, #ed8f03e5);
+}
+
+@media (min-width: 1000px) {
+  .Booking {
+    padding: 10rem 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  .BookForm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 1000px) {
+  .BookForm .InputGroup {
+    margin-bottom: 0;
+  }
+}
+
+.BookForm .InputGroup:first-child {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
+}
+
+.InputGroup {
+  margin-bottom: 1.5rem;
+}
+
+.InputLabel {
+  display: block;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.Input,
+.Options {
+  outline: none;
+  border: none;
+  width: 100%;
+  min-height: 4rem;
+  padding: 1rem;
+  font-weight: bold;
+  color: #a5a5a5;
+  letter-spacing: 2px;
+  font-family: sans-serif;
+}
+
+@media (min-width: 1000px) {
+  .Input,
+  .Options {
+    min-width: 10rem;
+  }
+}
+
+::-webkit-input-placeholder {
+  color: inherit;
+}
+
+:-ms-input-placeholder {
+  color: inherit;
+}
+
+::-ms-input-placeholder {
+  color: inherit;
+}
+
+::placeholder {
+  color: inherit;
+}
+
+.SectionHead {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.Heading {
+  display: block;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+.SubHeading {
+  font-size: 1.7rem;
+  font-weight: 300;
+  color: #a5a5a5;
+}
+
+.Grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: 2rem;
+}
+
+.GridItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.FeaturedHotels {
+  height: 35rem;
+  color: #fff;
+  padding: 1rem;
+  position: relative;
+  z-index: 0;
+}
+
+.FeaturedHotels::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(53, 10, 79, 0.5);
+  z-index: -1;
+}
+
+.HotelImage {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+.HotelName {
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.HotelPrice {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.HotelRating {
+  margin: 1rem 0 1.5rem;
+}
+
+.Rating {
+  color: #f1be14;
+}
+
+.Offer {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(250, 158, 44, 0.8)), to(rgba(143, 80, 251, 0.8))), url("/images/paradise.jpg") bottom center no-repeat;
+  background: linear-gradient(to right, rgba(250, 158, 44, 0.8), rgba(143, 80, 251, 0.8)), url("/images/paradise.jpg") bottom center no-repeat;
+  background-size: cover;
+}
+
+.OfferContent {
+  background-color: #fff;
+  text-align: center;
+  padding: 5rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.Discount {
+  background-color: #f1be14;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  outline: 2px solid #f1be14;
+  outline-offset: 0.5rem;
+}
+
+.Paragraph {
+  color: #a5a5a5;
+  margin-bottom: 2.5rem;
+}
+
+.Rooms {
+  background-color: #f2f6f9;
+}
+
+@media (min-width: 1000px) {
+  .RoomsGrid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(45rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    grid-gap: 8rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .FeaturedRooms {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (min-width: 1000px) {
+  .RoomInfoWrap {
+    margin-left: 1.5rem;
+  }
+}
+
+.ImageWrap {
+  position: relative;
+  height: 35rem;
+  width: 100%;
+}
+
+.ImageWrap::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(53, 10, 79, 0.5);
+}
+
+.RoomImage {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (min-width: 1000px) {
+  .RoomImage {
+    width: 100%;
+    height: 35rem;
+  }
+}
+
+.RoomName {
+  font-size: 2.6rem;
+  background: #f1be14;
+  color: #fff;
+  padding: 0.5rem 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 2.5rem;
+  z-index: 10;
+  border-radius: 0 20px 20px 0;
+}
+
+.RoomPrice {
+  display: block;
+  font-size: 3.6rem;
+  font-weight: bold;
+  color: #f1be14;
+}
+
+.PerNight {
+  color: #2d2c2c;
+  font-size: 1.4rem;
+  font-weight: 100;
+}
+
+.RoomsBtn {
+  color: #2d2c2c;
+  padding: 0;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.RoomsBtn:hover {
+  color: #f1be14;
+}
+
+.ContactContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .ContactContent {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.TravelerWrap {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .TravelerWrap {
+    display: block;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 45%;
+            flex: 0 0 45%;
+  }
+}
+
+@media (min-width: 768px) {
+  .TravelerWrap img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.ContactForm {
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#f1be14), to(#ed8f03e5));
+  background: linear-gradient(to right, #f1be14, #ed8f03e5);
+  padding: 2.5rem;
+}
+
+.ContactForm .Input {
+  display: block;
+  background-color: transparent;
+  color: #fff;
+  font-weight: normal;
+  border-bottom: 2px solid #fff;
+  padding-left: 0;
+}
+
+@media (min-width: 768px) {
+  .ContactForm {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+}
+
+.Bar {
+  display: block;
+  position: relative;
+}
+
+.Bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #ed8f03e5;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.ContactForm .Input:focus + .Bar::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.Footer {
+  padding: 5rem 0;
+  background-color: #ED8F03;
+  color: #fff;
+}
+
+.Footer .Paragraph {
+  color: inherit;
+}
+
+@media (min-width: 768px) {
+  .Footer .Paragraph {
+    margin-top: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .Footer {
+    overflow-x: hidden;
+  }
+}
+
+@media (min-width: 768px) {
+  .FooterContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.FooterContentBrand {
+  margin-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+  .FooterContentBrand {
+    margin-bottom: 0;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 60%;
+            flex: 0 0 60%;
+  }
+}
+
+.FooterHeading {
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .FooterHeading {
+    margin-bottom: 5rem;
+  }
+}
+
+.SocialMedia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .SocialMediaWrap {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 40%;
+            flex: 0 0 40%;
+    margin-left: 2.5rem;
+  }
+}
+
+.SmLink {
+  width: 4rem;
+  height: 4rem;
+  font-size: 2rem;
+  border: 2px solid #f1be14;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 1rem;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.SmLink:hover {
+  background-color: #f1be14;
+  color: #2d2c2c;
+}
+
+.SmLink i {
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .InputGroupWrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .InputGroupWrap .InputGroup {
+    width: 50%;
+    margin-right: 2rem;
+  }
+}
+
+.InputGroupWrap .InputGroup:last-child {
+  margin-right: 0;
+}
+/*# sourceMappingURL=style.css.map */

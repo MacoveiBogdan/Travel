@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teavel</title>
+    <!-- Font awesome CND -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="Header">
+        <div class="Container">
+            <nav class="Nav">
+                <a href="index.html" class="Logo">
+                    <!-- <img src="/images/logo.png" class="LogoImg" alt="Logo" width="40" height="40"> -->
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h4 class="LogoText">Travel</h4>
+                </a>
+                <div class="HamburgerMenu">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-times"></i>
+                </div>
+                <ul class="NavList">
+                    <li class="NavItem">
+                        <a href="index.html" class="NavLink">Home</a>
+                    </li>
+                    <li class="NavItem">
+                        <a href="#" class="NavLink">About</a>
+                    </li>
+                    <li class="NavItem">
+                        <a href="#" class="NavLink">Offers</a>
+                    </li>
+                    <li class="NavItem">
+                        <a href="#" class="NavLink">News</a>
+                    </li>
+                    <li class="NavItem">
+                        <a href="#contact" class="NavLink">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="Hero">
+            <div class="Container">
+                <div class="MainHeading">
+                    <h1 class="Title">Discover</h1>
+                    <h2 class="Subtitle">Luxury hotels</h2>
+                </div>
+                <a href="#" class="Btn BtnGradient">Explore now
+                    <span class="Dots"><i class="fas fa-ellipsis-h"></i></span>
+                </a>
+            </div>
+        </div>
+
+        <section class="Booking">
+            <div class="Container">
+                <form action="" class="BookForm">
+                    <div class="InputGroup">
+                        <label for="destination" class="InputLabel">Destination</label>
+                        <input type="text" class="Input" id="destination">
+                    </div>
+                    <div class="InputGroup">
+                        <label for="check-in" class="InputLabel">Check in</label>
+                        <input type="date" class="Input" id="checkIn">
+                    </div>
+                    <div class="InputGroup">
+                        <label for="check-ou" class="InputLabel">Check Out</label>
+                        <input type="date" class="Input" id="checkOut">
+                    </div>
+                    <div class="InputGroup">
+                        <label for="adults" class="InputLabel">Adults</label>
+                        <select class="Options" id="adults">
+                            <option value="0">0</option>
+                            <option value="0">1</option>
+                            <option value="0">2</option>
+                            <option value="0">3</option>
+                            <option value="0">4</option>
+                            <option value="0">5</option>
+                        </select>
+                    </div>
+                    <div class="InputGroup">
+                        <label for="children" class="InputLabel">Children</label>
+                        <select class="Options" id="children">
+                            <option value="0">0</option>
+                            <option value="0">1</option>
+                            <option value="0">2</option>
+                            <option value="0">3</option>
+                            <option value="0">4</option>
+                            <option value="0">5</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="Btn FormBtn BtnPurple">Search
+                        <span class="Dots"><i class="fas fa-ellipsis-h"></i></span>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section class="Hotels">
+            <div class="Container">
+                <h5 class="SectionHead">
+                    <span class="Heading">Explore</span>
+                    <span class="SubHeading">Our beautiful hotels</span>
+                </h5>
+                <div class="Grid">
+                    <div class="GridItem FeaturedHotels">
+                        <img src="./images/hotel-resort.jpg" alt="Hotel resort" class="HotelImage" width="450"
+                            height="350">
+                        <h5 class="HotelName">Florida Hotel</h5>
+                        <span class="HotelPrice">From $300/Night</span>
+                        <div class="HotelRating">
+                            <i class="fas fa-star Rating"></i>
+                            <i class="fas fa-star Rating"></i>
+                            <i class="fas fa-star Rating"></i>
+                            <i class="fas fa-star Rating"></i>
+                            <i class="fas fa-star-half Rating"></i>
+                        </div>
+                        <a href="#" class="Btn BtnGradient"> Book now
+                            <span class="Dots"><i class="fas fa-ellipsis-h"></i></span>
+                        </a>
+                    </div>
+
+                    <div class="GridItem FeaturedHotels">
+                        <img src="./images/hotel-resort2.jpg" alt="Hotel resort" class="HotelImage" width="450"
+                            height="350">
+                        <h5 class="HotelName">Roma Hotel</h5>
+                        <span class="HotelPrice">From $250/Night</span>
+                        <div class="HotelRating">
+                            <i class="fas fa-star Rating"></i>
+                            <i class="fas fa-star Rating"></i>
+                            <i class="fas fa-star Rating"></i>
+                            <i class="fas fa-star Rating"></i>
+                        </div>
+                        <a href="#" class="Btn BtnGradient"> Book now
+                            <span class="Dots"><i class="fas fa-ellipsis-h"></i></span>
+                        </a>
+                    </div>
+
+                    <div class="GridItem FeaturedHotels">
+                        <img src="./images/hotel-resort3.jpg" alt="Hotel resort" class="HotelImage" width="450"
+                            height="350">
+                        <h5 class="HotelName">Ibiza Hotel</h5>
+                        <span class="HotelPrice">From $450/Night</span>
+                        <div class="HotelRating">
+                            <i class="fas fa-star Rating"></i>
+                            <i class="fas fa-star Rating"></i>
+                            <i class="fas fa-star Rating"></i>
+                            <i class="fas fa-star Rating"></i>
+                            <i class="fas fa-star Rating"></i>
+                        </div>
+                        <a href="#" class="Btn BtnGradient"> Book now
+                            <span class="Dots"><i class="fas fa-ellipsis-h"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="Offer">
+            <div class="Container">
+                <div class="OfferContent">
+                    <div class="Discount">
+                        40% off
+                    </div>
+                    <h5 class="HotelName">Ibiza hotel</h5>
+                    <div class="HotelRating">
+                        <i class="fas fa-star Rating"></i>
+                        <i class="fas fa-star Rating"></i>
+                        <i class="fas fa-star Rating"></i>
+                        <i class="fas fa-star Rating"></i>
+                        <i class="fas fa-star Rating"></i>
+                    </div>
+                    <p class="Paragraph">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati, ab voluptate iusto
+                        similique ipsa nulla enim ipsum ad vero cumque necessitatibus, aperiam
+                    </p>
+                    <a href="#" class="Btn BtnGradient"> Redeem offer
+                        <span class="Dots"><i class="fas fa-ellipsis-h"></i></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="Rooms">
+            <div class="Conainer">
+                <h5 class="SectionHead">
+                    <span class="Heading">Luxurious</span>
+                    <span class="SubHeading">Affordable rooms</span>
+                </h5>
+                <div class="Grid RoomsGrid">
+                    <div class="GridItem FeaturedRooms HoverRooms">
+                        <div class="ImageWrap">
+                            <img src="./images/room.jpg" alt="Imagine din camera de hotel" class="RoomImage" width="450"
+                                height="350">
+                            <h5 class="RoomName">Florida Hotel</h5>
+                        </div>
+                        <div class="RoomInfoWrap">
+                            <span class="RoomPrice">$200 <span class="PerNight">Per night</span></span>
+                            <p class="Paragraph">
+                                Lorem ipsum dolor sit, Quibusdam dolorem ad ducimus
+                                delectus voluptate accusamus officia architecto voluptatem officiis blanditiis.
+                            </p>
+                            <a href="#" class="Btn RoomsBtn">Book now &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- TO DO de modificat numele hotelului si img camera si pretul -->
+                    <div class="GridItem FeaturedRooms">
+                        <div class="ImageWrap">
+                            <img src="./images/room.jpg" alt="Imagine din camera de hotel" class="RoomImage" width="450"
+                                height="350">
+                            <h5 class="RoomName">Florida Hotel</h5>
+                        </div>
+                        <div class="RoomInfoWrap">
+                            <span class="RoomPrice">$200 <span class="PerNight">Per night</span></span>
+                            <p class="Paragraph">
+                                Lorem ipsum dolor sit, Quibusdam dolorem ad ducimus
+                                delectus voluptate accusamus officia architecto voluptatem officiis blanditiis.
+                            </p>
+                            <a href="#" class="Btn RoomsBtn">Book now &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="GridItem FeaturedRooms">
+                        <div class="ImageWrap">
+                            <img src="./images/room.jpg" alt="Imagine din camera de hotel" class="RoomImage" width="450"
+                                height="350">
+                            <h5 class="RoomName">Florida Hotel</h5>
+                        </div>
+                        <div class="RoomInfoWrap">
+                            <span class="RoomPrice">$200 <span class="PerNight">Per night</span></span>
+                            <p class="Paragraph">
+                                Lorem ipsum dolor sit, Quibusdam dolorem ad ducimus
+                                delectus voluptate accusamus officia architecto voluptatem officiis blanditiis.
+                            </p>
+                            <a href="#" class="Btn RoomsBtn">Book now &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="GridItem FeaturedRooms">
+                        <div class="ImageWrap">
+                            <img src="./images/room.jpg" alt="Imagine din camera de hotel" class="RoomImage" width="450"
+                                height="350">
+                            <h5 class="RoomName">Florida Hotel</h5>
+                        </div>
+                        <div class="RoomInfoWrap">
+                            <span class="RoomPrice">$200 <span class="PerNight">Per night</span></span>
+                            <p class="Paragraph">
+                                Lorem ipsum dolor sit, Quibusdam dolorem ad ducimus
+                                delectus voluptate accusamus officia architecto voluptatem officiis blanditiis.
+                            </p>
+                            <a href="#" class="Btn RoomsBtn">Book now &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="GridItem FeaturedRooms">
+                        <div class="ImageWrap">
+                            <img src="./images/room.jpg" alt="Imagine din camera de hotel" class="RoomImage" width="450"
+                                height="350">
+                            <h5 class="RoomName">Florida Hotel</h5>
+                        </div>
+                        <div class="RoomInfoWrap">
+                            <span class="RoomPrice">$200 <span class="PerNight">Per night</span></span>
+                            <p class="Paragraph">
+                                Lorem ipsum dolor sit, Quibusdam dolorem ad ducimus
+                                delectus voluptate accusamus officia architecto voluptatem officiis blanditiis.
+                            </p>
+                            <a href="#" class="Btn RoomsBtn">Book now &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="GridItem FeaturedRooms">
+                        <div class="ImageWrap">
+                            <img src="./images/room.jpg" alt="Imagine din camera de hotel" class="RoomImage" width="450"
+                                height="350">
+                            <h5 class="RoomName">Florida Hotel</h5>
+                        </div>
+                        <div class="RoomInfoWrap">
+                            <span class="RoomPrice">$200 <span class="PerNight">Per night</span></span>
+                            <p class="Paragraph">
+                                Lorem ipsum dolor sit, Quibusdam dolorem ad ducimus
+                                delectus voluptate accusamus officia architecto voluptatem officiis blanditiis.
+                            </p>
+                            <a href="#" class="Btn RoomsBtn">Book now &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="GridItem FeaturedRooms">
+                        <div class="ImageWrap">
+                            <img src="./images/room.jpg" alt="Imagine din camera de hotel" class="RoomImage" width="450"
+                                height="350">
+                            <h5 class="RoomName">Florida Hotel</h5>
+                        </div>
+                        <div class="RoomInfoWrap">
+                            <span class="RoomPrice">$200 <span class="PerNight">Per night</span></span>
+                            <p class="Paragraph">
+                                Lorem ipsum dolor sit, Quibusdam dolorem ad ducimus
+                                delectus voluptate accusamus officia architecto voluptatem officiis blanditiis.
+                            </p>
+                            <a href="#" class="Btn RoomsBtn">Book now &rarr;;</a>
+                        </div>
+                    </div>
+                    <div class="GridItem FeaturedRooms">
+                        <div class="ImageWrap">
+                            <img src="./images/room.jpg" alt="Imagine din camera de hotel" class="RoomImage" width="450"
+                                height="350">
+                            <h5 class="RoomName">Florida Hotel</h5>
+                        </div>
+                        <div class="RoomInfoWrap">
+                            <span class="RoomPrice">$200 <span class="PerNight">Per night</span></span>
+                            <p class="Paragraph">
+                                Lorem ipsum dolor sit, Quibusdam dolorem ad ducimus
+                                delectus voluptate accusamus officia architecto voluptatem officiis blanditiis.
+                            </p>
+                            <a href="#" class="Btn RoomsBtn">Book now &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="GridItem FeaturedRooms">
+                        <div class="ImageWrap">
+                            <img src="./images/room.jpg" alt="Imagine din camera de hotel" class="RoomImage" width="450"
+                                height="350">
+                            <h5 class="RoomName">Florida Hotel</h5>
+                        </div>
+                        <div class="RoomInfoWrap">
+                            <span class="RoomPrice">$200 <span class="PerNight">Per night</span></span>
+                            <p class="Paragraph">
+                                Lorem ipsum dolor sit, Quibusdam dolorem ad ducimus
+                                delectus voluptate accusamus officia architecto voluptatem officiis blanditiis.
+                            </p>
+                            <a href="#" class="Btn RoomsBtn">Book now &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="Contact" id="contact">
+            <div class="Container">
+                <h5 class="SectionHead">
+                    <span class="Heading">Contact</span>
+                    <span class="SubHeading">Get in touch with us</span>
+                </h5>
+                <div class="ContactContent">
+                    <div class="TravelerWrap">
+                        <img src="./images/contact.jpg" alt="Un om in aeroport" width="450" height="350">
+                    </div>
+                    <form action="" class="Form ContactForm">
+                        <div class="InputGroupWrap">
+                            <div class="InputGroup">
+                                <!-- required inseamna ca aceste campuri sunt obligatorii -->
+                                <input type="text" class="Input" placeholder="Name" required>
+                                <span class="Bar"></span>
+                            </div>
+                            <div class="InputGroup">
+                                <input type="email" class="Input" placeholder="E-mail" required>
+                                <span class="Bar"></span>
+                            </div>
+                        </div>
+                        <div class="InputGroup">
+                            <input type="text" class="Input" placeholder="Subject">
+                            <span class="Bar"></span>
+                        </div>
+                        <div class="InputGroup">
+                            <textarea class="Input" cols="30" rows="8" placeholder="The message"></textarea>
+
+                            <span class="Bar"></span>
+                        </div>
+                        <button type="submit" class="Btn FormBtn BtnPurple">Send Message
+                            <span class="Dots"><i class="fas fa-ellipsis-h"></i></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="Footer">
+        <div class="Container">
+            <div class="FooterContent">
+                <div class="FooterContentBrand">
+                    <a href="index.html" class="Logo">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h4 class="LogoText">Travel</h4>
+                    </a>
+                    <div class="Paragraph">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, laborum. Aliquam beatae ipsum
+                        debitis rerum cumque esse, possimus quidem!
+                    </div>
+                </div>
+                <div class="SocialMediaWrap">
+                    <h4 class="FooterHeading">Follow us</h4>
+                    <div class="SocialMedia">
+                        <a href="#" class="SmLink"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="SmLink"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="SmLink"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="SmLink"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="SmLink"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

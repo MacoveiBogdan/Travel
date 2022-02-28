@@ -1,0 +1,600 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Variabile SCSS
+$dark-color: #2d2c2c;
+$orange-solid: #ED8F03;
+$purple-transparent: rgba(53, 10, 79, 0.7);
+$purple-transparent-alt: rgba(53, 10, 79, 0.5);
+$orange-light: #ed8f03e5;
+$yellow-solid: #f1be14;
+
+$gradient-color: linear-gradient(to right, $yellow-solid, $orange-light);
+$gradient-color-alt: linear-gradient(to right, $orange-light, $yellow-solid);
+
+// Global styles
+html {
+    font-size: 10px;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    color: $dark-color;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul {
+    list-style-type: none;
+}
+section {
+    padding: 5rem 0;
+}
+
+// Reutilizare styles
+.Btn {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.5rem 3.5rem;
+    border: none;
+    border-radius: 10rem;
+    display: inline-flex;
+    align-items: center;
+}
+.Container {
+    width: 100%;
+    max-width: 120rem;
+    padding: 0 1.5rem;
+    margin: 0 auto;
+}
+.FormBtn {
+    margin-top: 2.5rem;
+    cursor: pointer;
+}
+.BtnGradient {
+    background: $gradient-color;
+    &:hover {
+        background: $gradient-color-alt;
+    }
+}
+.Dots {
+    font-size: 2.4rem;
+    margin-left: 0.5rem;
+    opacity: 0.75;
+}
+.BtnPurple {
+    background: $orange-solid;
+    &:hover {
+        background: #56247f;
+    }
+}
+
+// Header styles
+.Header {
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $purple-transparent;
+    z-index: 999;
+    @media (min-width: 768px) {
+        height: 10rem;
+    }
+}
+.Nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Logo {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 2.8rem;
+}
+.LogoImg {
+    max-width: 80%;
+}
+.LogoText {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2.6rem;
+    letter-spacing: 2px;
+}
+
+.HamburgerMenu {
+    font-size: 2.6rem;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 1500;
+    @media (min-width: 1000px) {
+        display: none;
+    }
+}
+.fa-times {
+    display: none;
+}
+.MenuOpen .HamburgerMenu .fa-times {
+    display: block;
+}
+.MenuOpen .HamburgerMenu .fa-bars {
+    display: none;
+}
+.NavList {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: $orange-solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1400;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.5s;
+    @media (min-width: 1000px) {
+        position: initial;
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        flex-direction: row;
+        justify-content: initial;
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.MenuOpen .NavList {
+    opacity: 1;
+    transform: scale(1);
+}
+.NavLink {
+    display: block;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 1rem;
+    @media (min-width: 1000px) {
+        font-size: 1.5rem;
+        font-weight: bold;
+        transition: color 0.5s;
+    }
+    &:hover {
+        @media (min-width: 1000px) {
+            color: $yellow-solid;
+        }
+    }
+}
+.NavItem {
+    margin-bottom: 0.5rem;
+
+    &:last-child {
+        @media (min-width: 1000px) {
+            margin-right: 3rem;
+            margin-bottom: 0;
+        }
+    }
+}
+
+// Hero styles
+.Hero {
+    width: 100%;
+    height: 100vh;
+    background: url("../images/heroBackground.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: inherit;
+        height: inherit;
+        background: $purple-transparent-alt;
+        z-index: -1;
+    }
+}
+.MainHeading {
+    color: #fff;
+    line-height: 1;
+    text-shadow: 1px 1px 1rem rgba(0, 0, 0, 0.5);
+    margin-bottom: 2.5rem;
+}
+.Title {
+    font-size: 4.8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    @media (min-width: 768px) {
+        font-size: 8rem;
+    }
+    @media (min-width: 1000px) {
+        font-size: 12rem;
+    }
+}
+.Subtitle {
+    font-size: 3.6rem;
+    font-weight: 300;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    @media (min-width: 1000px) {
+        font-size: 4.6rem;
+    }
+}
+
+// Booking section styles
+.Booking {
+    background: $gradient-color;
+    @media (min-width: 1000px) {
+        padding: 10rem 0;
+    }
+}
+.BookForm {
+    @media (min-width: 1000px) {
+        display: flex;
+        justify-content: space-between;
+    }
+    .InputGroup {
+        @media (min-width: 1000px) {
+            margin-bottom: 0;
+        }
+        &:first-child {
+            flex: 0 0 20%;
+        }
+    }
+}
+.InputGroup {
+    margin-bottom: 1.5rem;
+}
+.InputLabel {
+    display: block;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.Input,
+.Options {
+    outline: none;
+    border: none;
+    width: 100%;
+    min-height: 4rem;
+    padding: 1rem;
+    font-weight: bold;
+    color: #a5a5a5;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+    @media (min-width: 1000px) {
+        min-width: 10rem;
+    }
+}
+::placeholder {
+    color: inherit;
+}
+
+// Feature hotels section styles
+.SectionHead {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+.Heading {
+    display: block;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+.SubHeading {
+    font-size: 1.7rem;
+    font-weight: 300;
+    color: #a5a5a5;
+}
+.Grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 2rem;
+}
+.GridItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.FeaturedHotels {
+    height: 35rem;
+    color: #fff;
+    padding: 1rem;
+    position: relative;
+    z-index: 0;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $purple-transparent-alt;
+        z-index: -1;
+    }
+}
+.HotelImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+.HotelName {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+}
+.HotelPrice {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+.HotelRating {
+    margin: 1rem 0 1.5rem;
+}
+
+.Rating {
+    color: $yellow-solid;
+}
+
+// Special section styles
+.Offer {
+    background: linear-gradient(to right, rgba(250, 158, 44, 0.8), rgba(143, 80, 251, 0.8)),
+        url("/images/paradise.jpg") bottom center no-repeat;
+    background-size: cover;
+}
+.OfferContent {
+    background-color: #fff;
+    text-align: center;
+    padding: 5rem 1rem;
+    position: relative;
+    overflow: hidden;
+}
+.Discount {
+    background-color: $yellow-solid;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    outline: 2px solid $yellow-solid;
+    outline-offset: 0.5rem;
+}
+.Paragraph {
+    color: #a5a5a5;
+    margin-bottom: 2.5rem;
+}
+
+// Rooms section styles
+.Rooms {
+    background-color: #f2f6f9;
+}
+.RoomsGrid {
+    @media (min-width: 1000px) {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+        justify-content: space-between;
+        grid-gap: 8rem;
+    }
+}
+.FeaturedRooms {
+    @media (min-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.RoomInfoWrap {
+    @media (min-width: 1000px) {
+        margin-left: 1.5rem;
+    }
+}
+.ImageWrap {
+    position: relative;
+    height: 35rem;
+    width: 100%;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $purple-transparent-alt;
+    }
+}
+.RoomImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @media (min-width: 1000px) {
+        width: 100%;
+        height: 35rem;
+    }
+}
+.RoomName {
+    font-size: 2.6rem;
+    background: $yellow-solid;
+    color: #fff;
+    padding: 0.5rem 2rem;
+    position: absolute;
+    left: 0;
+    bottom: 2.5rem;
+    z-index: 10;
+    border-radius: 0 20px 20px 0;
+}
+.RoomPrice {
+    display: block;
+    font-size: 3.6rem;
+    font-weight: bold;
+    color: $yellow-solid;
+}
+.PerNight {
+    color: $dark-color;
+    font-size: 1.4rem;
+    font-weight: 100;
+}
+.RoomsBtn {
+    color: $dark-color;
+    padding: 0;
+    transition: color 0.5s;
+    &:hover {
+        color: $yellow-solid;
+    }
+}
+
+// Contact section style
+.ContactContent {
+    display: flex;
+    justify-content: center;
+    @media (min-width: 768px) {
+        justify-content: space-between;
+    }
+}
+.TravelerWrap {
+    display: none;
+    @media (min-width: 768px) {
+        display: block;
+        flex: 0 0 45%;
+    }
+}
+.TravelerWrap img {
+    @media (min-width: 768px) {
+        width: 100%;
+        height: 100%;
+    }
+}
+.ContactForm {
+    width: 100%;
+    background: $gradient-color;
+    padding: 2.5rem;
+    .Input {
+        display: block;
+        background-color: transparent;
+        color: #fff;
+        font-weight: normal;
+        border-bottom: 2px solid #fff;
+        padding-left: 0;
+    }
+    @media (min-width: 768px) {
+        flex: 0 0 50%;
+        align-self: flex-start;
+    }
+}
+.Bar {
+    display: block;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 3px;
+        background-color: $orange-light;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.5s;
+    }
+}
+.ContactForm .Input:focus + .Bar::after {
+    transform: scaleX(1);
+}
+
+// Footer section style
+.Footer {
+    padding: 5rem 0;
+    background-color: $orange-solid;
+    color: #fff;
+    .Paragraph {
+        color: inherit;
+        @media (min-width: 768px) {
+            margin-top: 2.5rem;
+        }
+    }
+    @media (min-width: 768px) {
+        overflow-x: hidden;
+    }
+}
+.FooterContent {
+    @media (min-width: 768px) {
+        display: flex;
+    }
+}
+.FooterContentBrand {
+    margin-bottom: 5rem;
+    @media (min-width: 768px) {
+        margin-bottom: 0;
+        flex: 0 0 60%;
+    }
+}
+.FooterHeading {
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+    @media (min-width: 768px) {
+        margin-bottom: 5rem;
+    }
+}
+.SocialMedia {
+    display: flex;
+}
+.SocialMediaWrap {
+    @media (min-width: 768px) {
+        flex: 0 0 40%;
+        margin-left: 2.5rem;
+    }
+}
+.SmLink {
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    border: 2px solid $yellow-solid;
+    border-radius: 50%;
+    display: flex;
+    margin-right: 1rem;
+    transition: background-color 0.5s;
+    &:hover {
+        background-color: $yellow-solid;
+        color: $dark-color;
+    }
+    & i {
+        margin: auto;
+    }
+}
+
+.InputGroupWrap {
+    @media (min-width: 768px) {
+        display: flex;
+    }
+    .InputGroup {
+        @media (min-width: 768px) {
+            width: 50%;
+            margin-right: 2rem;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
